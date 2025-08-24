@@ -350,7 +350,7 @@ jobs:
         run: |
          echo "构建kpm支持—万载哥哥进行修改"
          echo "CONFIG_KPM=y" >> common/arch/arm64/configs/gki_defconfig
-         sudo sed -i 's/check_defconfig//' common/build.config.gki || error "修改build.config.gki失败"
+         sudo sed -i 's/check_defconfig//' ./common/build.config.gki
           
       - name: 🔧 Add sched_ext (写入风驰补丁)
         if: ${{inputs.enable_feature_z }}
