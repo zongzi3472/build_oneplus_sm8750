@@ -349,7 +349,7 @@ jobs:
       - name: 🔧 KPM支持
         run: |
           cd kernel_workspace/kernel_platform  # 先切换到正确的目录
-          echo "构建kpm支持—万载哥哥进行修改"
+          echo "构建kpm支持"
           echo "CONFIG_KPM=y" >> ./common/arch/arm64/configs/gki_defconfig
           sed -i 's/check_defconfig//' ./common/build.config.gki  # 移除 sudo
           
